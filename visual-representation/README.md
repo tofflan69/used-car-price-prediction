@@ -1,12 +1,14 @@
 # Used Car Price Prediction – Visual App
 
+Visual representation of a subset of the model: https://used-car-price-prediction-vilgotteiffel.streamlit.app/
+
 This repository contains a **visual, interactive representation** of my main project:
 `used-car-price-prediction`.
 
 The core modelling, data cleaning and analysis live in the
 `used-car-price-prediction` repository.  
 This repo focuses on turning that work into a **web app** so that anyone can
-play with the models in a browser.
+play with a subset of the models in a browser.
 
 ---
 
