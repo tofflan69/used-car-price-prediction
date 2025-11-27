@@ -5,13 +5,16 @@ import joblib
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+# Base directory for this app file (visual-representation/)
+BASE_DIR = Path(__file__).resolve().parent
 
-DATA_PATH = Path("data") / "blocket_cars.csv"
+DATA_PATH = BASE_DIR / "data" / "blocket_cars.csv"
+MODEL_PATH = BASE_DIR / "model.pkl"
 
 
 @st.cache_resource
 def load_artifact():
-    artifact = joblib.load("model.pkl")
+    artifact = joblib.load(MODEL_PATH)
     return artifact
 
 
@@ -23,6 +26,7 @@ def load_data():
         )
     df = pd.read_csv(DATA_PATH)
     return df
+
 
 
 def predict_mv(year, hp, mileage, mv_info):

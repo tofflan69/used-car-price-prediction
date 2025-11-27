@@ -14,7 +14,9 @@ from sklearn.metrics import (
 from sklearn.preprocessing import StandardScaler
 
 
-DATA_PATH = Path("data") / "blocket_cars.csv"
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "blocket_cars.csv"
+MODEL_PATH = BASE_DIR / "model.pkl"
 
 
 def dat(df_raw: pd.DataFrame) -> pd.DataFrame:
@@ -273,7 +275,7 @@ def train():
         "mv_top": mv_top,
     }
 
-    joblib.dump(artifact, "model.pkl")
+    joblib.dump(artifact, MODEL_PATH)
     print("Model trained and saved to model.pkl")
     print(f"Top manufacturer used in assignment-style subset: {top_manufacturer}")
     if top10_manufacturers:
