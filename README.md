@@ -1,5 +1,7 @@
 # Car Price Modelling & Transmission Prediction
 
+Visual representation of a subset of the model: https://used-car-price-prediction-vilgotteiffel.streamlit.app/
+
 This project explores a used car dataset and builds a series of models to:
 
 1. Predict car prices using:
