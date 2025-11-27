@@ -160,7 +160,7 @@ def main():
         # Predict
         if st.button("Predict price"):
             y_pred = predict_mv(year, hp, mileage, mv_info)
-            st.success(f"Estimated price: **€{y_pred:,.0f}**")
+            st.success(f"Estimated price: **{y_pred:,.0f} SEK**")
 
             st.caption(
                 f"Prediction from the {brand} model trained on "
